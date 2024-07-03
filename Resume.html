@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Portfolio</title>
+    <link rel="stylesheet" href="Resume.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Venkat Reddy Mankala</span></a>
+        <nav class="navbar" id="sidemenu">
+            <a href="http://127.0.0.1:5501/index.html" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Skills</a>
+            <a href="#">Projects</a>
+            <a href>
+            <i class="fas fa-times" style="color: white;" onclick="closemenu()"></i>
+        </nav>
+        <i class="fas fa-bars" style="color: white;" onclick="openmenu()"></i>
+    </header>
+
+    <section id="resume" class="resume">
+        <div class="container">
+            <h1>Venkat Reddy Mankala</h1>
+            <p1>Buffalo, NY | +1 (716) 247 3238 | <a1 href="mailto:2000venkatreddy@gmail.com">2000venkatreddy@gmail.com</a1> | <a1 href="http://www.linkedin.com/in/venkat-reddy-mankala-79035a221">LinkedIn</a1></p1>
+
+            <h2 class="left-align">Education</h2>
+            <h3>University At Buffalo</h3>
+            <p>Masters of Professional Studies in Data Science | CGPA: 3.5/4.0</p>
+            <p>Courses: Python, Machine Learning, DBMS, Data Mining, Cyber Security, Probability, Computational Mathematics</p>
+
+            <h3>Jawaharlal Nehru Technological University</h3>
+            <p>Bachelors in Information Technology | CGPA: 3.4/4.0</p>
+            <p>Courses: C, Data Structures and Algorithms, Python, DBMS, Computer Organization and Architecture, MATLAB</p>
+
+            <h2 class="left-align">Technical Skills</h2>
+            <p>Python, C, R, SQL, CSS, JavaScript, HTML, PL/SQL, Bootstrap, Jira, Eclipse, Object Oriented Programming, Agile, WordPress, Tableau, PowerBI, Machine Learning, AWS, Excel, Data Mining, Big Data, Statistics, Operating Systems, Cyber Security, Firebase</p>
+
+            <h2 class="left-align">Work Experience</h2>
+            <h3>Data Analyst</h3>
+            <p>IKS Health Services | Hyderabad, India | 11/2021 - 7/2022</p>
+            <ul class="bullet-points">
+                <li>Enhanced data set organization using Pandas and scikit-learn, boosting machine learning prediction precision by 30%.</li>
+                <li>Implemented regression analysis and data mining techniques, increasing customer retention by 15% and customer lifetime value by 20%.</li>
+                <li>Designed interactive dashboards using Tableau, facilitating complex data visualization and decision-making processes, resulting in a 30% increase in data accessibility.</li>
+                <li>Achieved a 95% accuracy rate in predictive modeling, significantly improving operational efficiencies.</li>
+            </ul>
+
+            <h3>Data Science Intern</h3>
+            <p>Natwest Consulting Solutions | Hyderabad, India | 8/2022 - 12/2022</p>
+            <ul class="bullet-points">
+                <li>Enhanced sales forecast accuracy by 20% through a TensorFlow-based neural network and refined inventory management.</li>
+                <li>Led the adoption of Agile practices causing a 20% acceleration of project development cycles and ensuring data integrity through database normalization.</li>
+                <li>Pioneered advanced time series analysis improving predictive analytics by 30% and optimizing marketing.</li>
+            </ul>
+
+            <h2 class="left-align">Projects</h2>
+            <h3>Parkinson's Disease Prediction</h3>
+            <p>Python, XGBoost, Machine Learning, Data Analysis</p>
+            <ul class="bullet-points">
+                <li>Formulated a Machine Learning model using Python and XGBoost to detect Parkinson's Disease with 92.3% accuracy.</li>
+                <li>Employed k-fold cross-validation demonstrating robust analytical capabilities in health-tech through voice analysis and accomplished a validation accuracy of 95%.</li>
+            </ul>
+
+            <h3>Secure File Transfer and Processing System</h3>
+            <p>AWS, EC2, S3, IAM, VPC, Route 53, SQS, SNS, AWS Lambda</p>
+            <ul class="bullet-points">
+                <li>Orchestrated the creation of an AWS-based secure file transfer system, reducing manual processing by 90%.</li>
+                <li>Managed an EC2 instance with 98% processing accuracy, implemented real-time monitoring with AWS CloudWatch and SNS, cutting downtime by 50%.</li>
+                <li>Deployed rigorous IAM protocols thereby decreasing security risks by 75% and automating system-wide backups.</li>
+            </ul>
+
+            <h3>Supply Chain and Financial Integration Systems</h3>
+            <p>Database Design and Management, SQL, Rapid Application Development</p>
+            <ul class="bullet-points">
+                <li>Directed the creation of an integrated ERP database schema improving operational efficiency by 30%.</li>
+                <li>Spearheaded RAD methodology accelerating project development by 20% and enhancing data consistency via database normalization in the technology sector.</li>
+            </ul>
+
+            <h3>Covid-19 Prediction System</h3>
+            <p>Python, Pandas, Matplotlib, Seaborn, Plotly, Folium, Facebook's Prophet</p>
+            <ul class="bullet-points">
+                <li>Analyzed COVID-19 spread in India and benchmarked against trends in Italy, South Korea, and Wuhan and utilized Facebook's Prophet to forecast case trends.</li>
+                <li>Generated visualizations for pandemic monitoring reducing forecasting errors by 30%.</li>
+            </ul>
+
+            <h3>Sales Superstore Dashboard Implementation </h3>
+            <p>Tableau, Python, Pandas</p>
+            <ul class="bullet-points">
+                <li>Engineered data cleaning workflows with Python (Pandas, BS4, Regex) for a 100,000+ row dataset, boosting data accuracy by 50% and enhancing analytical capabilities.</li>
+                <li>Deployed five interactive Tableau dashboards for Sales Superstore Analytics, improving decision-making by 40% and operational insights by 25% with real-time visualizations of key metrics.</li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        function openmenu() {
+            document.getElementById("sidemenu").style.right = "0";
+        }
+
+        function closemenu() {
+            document.getElementById("sidemenu").style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

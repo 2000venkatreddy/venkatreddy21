@@ -1,0 +1,259 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 12%;
+    background: black;
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    color: white;
+    text-shadow: 0 0 10px white;
+    transform: scale(1.1);
+}
+
+.navbar a {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid gray;
+}
+
+.fas {
+    display: none;
+}
+
+#main-content {
+    margin-top: 80px; /* Add margin to prevent content from being hidden behind the fixed header */
+    width: 100%;
+    height: 40vh; /* Keep the height of image1 section */
+    background-image: url('Projectimg2.jpg'); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Relative positioning for overlay */
+    padding-top: 110px; /* Adjust padding to avoid content being hidden by fixed header */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: gray; /* White text color */
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 4em; /* Adjust size as needed */
+    font-weight: bold; /* Bold text */
+    font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+    color: gray; /* White color for the p */
+    font-style: italic;
+}
+
+.overlay:hover {
+    text-shadow: 0 0 25px rgb(239, 233, 233);
+    color: white;
+}
+
+
+
+header .fas {
+    display: none;
+}
+
+section {
+    padding: 20px 12%;
+    text-align: justify;
+}
+
+h2 {
+    font-size: 3em;
+    font-style: oblique;
+    font-weight: bold;
+    color: gray;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+p, ul {
+    font-size: 1.3em;
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: darkgray; /* Adjust this as needed */
+    padding: 40px 0;
+    text-align: right; /* Align text to the right */
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-content p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    text-align: center; /* Align text to the center */
+}
+
+.social-icons {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center icons vertically */
+    justify-content: center; /* Align icons to the center */
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #333;
+    margin: 0 10px;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #666; /* Adjust hover color as needed */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 1em;
+    color: #666;
+    text-align: center; /* Align text to the center */
+    margin: 0; /* Removed extra margins */
+}
+
+/* Toggle open/close menu for mobile view */
+@media (max-width: 768px) {
+    .header {
+        padding: 25px 29%;
+        color: #666;
+        flex-direction: column;
+        align-items: flex-start;  /* Align items to the left */
+        display: flex;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -200px;  /* Correct initial position */
+        width: 200px;
+        height: 100vh;
+        background: #ff004f;
+        padding-top: 50px;
+        transition: right 0.3s ease;
+    }
+
+    header .fa-bars {
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 20px; /* Positioned on the left */
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    header .fa-times {
+        display: none; /* Initially hidden */
+        position: absolute;
+        top: 15px;
+        left: 20px; /* Positioned on the left */
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .overlay h1 {
+        font-size: 2em; /* Adjust size as needed */
+        font-weight: bold; /* Bold text */
+        font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+        color: gray; /* White color for the p */
+        font-style: italic;
+    }
+}
+
+/* Responsive menu visibility */
+@media (max-width: 820px) and (min-height: 1180px) {
+    header .fas {
+        display: none; /* Do not display in this media query */
+    }
+
+    .fa-bars {
+        display: none; /* Do not display in this media query */
+    }
+}

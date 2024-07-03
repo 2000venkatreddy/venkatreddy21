@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio of Venkat Reddy Mankala</title>
+    <link rel="stylesheet" href="Sales_Superstore_Dashboard _Implementation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Venkat Reddy Mankala</span></a>
+        <nav class="navbar" id="sidemenu">
+            <a href="/index.html" class="active">Home</a>
+            <a href="#about" id="aboutLink">About</a>
+            <a href="#skills" id="skillsLink">Skills</a>
+            <a href="#projects" id="projectsLink">Projects</a>
+            <a href="#certifications" id="certificationsLink">Certifications</a>
+            <a href="/Resume.html">Resume</a>
+            <i class="fas fa-times" style="color: white;" onclick="closemenu()"></i>
+        </nav>
+        <i class="fas fa-bars" style="color: white;" onclick="openmenu()"></i>
+    </header>
+
+    <div id="main-content">
+        <div class="overlay">
+            <h1>Sales Superstore Dashboard Implementation</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="content" id="abstract">
+            <h2>Abstract</h2>
+            <p>The Superstore Explorer project involves the analysis and visualization of sales data from the Sales Superstore dataset using Python and Tableau. The dataset comprises various attributes related to sales and shipping, including product names, order dates, shipping information, and profitability. The goal is to provide comprehensive insights into sales performance, shipping efficiency, and profitability across different regions and product categories.</p>
+        </section>
+        <section class="content" id="introduction">
+            <h2>Introduction</h2>
+            <p>Sales Superstore Analytics leverages Tableau, a leading analytics platform, to empower businesses with data-driven decision-making capabilities. This project focuses on analyzing a significant dataset containing sales and shipping information to generate actionable insights. Tableau's intuitive user interface and powerful visualization tools make it an ideal choice for this project, which aims to enhance understanding and optimize operations within the Sales Superstore.</p>
+        </section>
+        <section class="content" id="objective">
+            <h2>Project Objective</h2>
+            <p>The primary objective of the Superstore Explorer project is to analyze and visualize sales data to provide valuable insights into sales performance, shipping efficiency, and profitability. The project aims to assist sales managers, supply chain managers, financial analysts, regional managers, and data analysts in making informed decisions based on the analyzed data.</p>
+        </section>
+        <section class="content" id="methodology">
+            <h2>Methodology</h2>
+            <p>The project involves Five key steps:</p>
+            <ul>
+                <li><strong>Data Collection:</strong> Retrieving sales and shipping data from the Sales Superstore dataset.</li>
+                <li><strong>Data Preprocessing:</strong> Using Python for data cleaning and preprocessing, including the elimination of unwanted features and records, data type adjustments, and exporting the processed data into CSV files.</li>
+                <li><strong>Data Visualization:</strong> Utilizing Tableau to create interactive dashboards and visualizations, such as scatter plots, symbol maps, Gantt charts, and stacked bar charts, to represent various metrics and insights.</li>
+            </ul>
+        </section>
+        <section class="content" id="dashboard-images">
+            <h3>Dashboards-1</h3>
+            <div class="dashboard">
+                <img src="Dashboard-1.png" alt="Dashboard 1">
+            </div>
+            <h3>Dashboards-2</h3>
+            <div class="dashboard">
+                <img src="Dashboard-2.png" alt="Dashboard 2">
+            </div>
+            <h3>Dashboards-3</h3>
+            <div class="dashboard">
+                <img src="Dashboard-3.png" alt="Dashboard 3">
+            </div>
+            <h3>Dashboards-4</h3>
+            <div class="dashboard">
+                <img src="Dashboard-4.png" alt="Dashboard 4">
+            </div>
+            <h3>Dashboards-5</h3>
+            <div class="dashboard">
+                <img src="Dashboard-5.png" alt="Dashboard 5">
+            </div>
+        </section>
+        <section class="content" id="results">
+            <h2>Results</h2>
+            <p>The project results include several dashboards that provide detailed insights into sales performance, shipping efficiency, and profitability. These visualizations help identify top-performing products, regions with the highest sales, shipping issues, and customer segments. The dashboards facilitate strategic decision-making by presenting key metrics and trends in an easily understandable format.</p>
+        </section>
+        <section class="content" id="conclusion">
+            <h2>Conclusion</h2>
+            <p>The Superstore Explorer project successfully demonstrates the power of data visualization in understanding and optimizing sales and shipping operations. By leveraging Python for data preprocessing and Tableau for visualization, the project provides valuable insights that can drive informed decision-making and enhance overall performance within the Sales Superstore. The interactive dashboards serve as a robust tool for various stakeholders, enabling them to gain a comprehensive understanding of sales dynamics and make data-driven decisions.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>"Did I spark your curiosity?"<br>"Give me a shout :)"</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/venkat-reddy-mankala-79035a221"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:2000venkatreddy@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 by Venkat</p>
+        </div>
+    </footer>
+    
+
+
+
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        var openMenuIcon = document.querySelector(".fa-bars");
+        var closeMenuIcon = document.querySelector(".fa-times");
+
+        function openmenu() {
+            sidemenu.style.left = "0";
+            openMenuIcon.style.display = "none";
+            closeMenuIcon.style.display = "block";
+        }
+
+        function closemenu() {
+            sidemenu.style.left = "-200px";
+            openMenuIcon.style.display = "block";
+            closeMenuIcon.style.display = "none";
+        }
+
+        openMenuIcon.addEventListener("click", openmenu);
+        closeMenuIcon.addEventListener("click", closemenu);
+    </script>
+</body>
+</html>

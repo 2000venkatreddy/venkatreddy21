@@ -1,0 +1,370 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5em;
+    width: 100%;
+    padding: 35px 12%;
+    background: black;
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    color: white;
+    text-shadow: 0 0 10px white;
+    transform: scale(1.1);
+}
+
+.navbar a {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid gray;
+}
+
+.fas {
+    display: none;
+}
+
+#main-content {
+    margin-top: 80px;
+    width: 100%;
+    height: 40vh;
+    background-image: url('images_certification.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-top: 110px;
+}
+
+#main-content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* White overlay with 50% opacity */
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 4em;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.overlay p {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: white;
+    margin-top: 0;
+}
+
+.overlay:hover {
+    text-shadow: 0 0 25px rgb(239, 233, 233);
+    color: white;
+}
+
+.down-arrow {
+    position: relative;
+    bottom: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.down-arrow a {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+    align-items: center;
+}
+
+.python_certificate_container {
+    display: flex;
+    justify-content: space-between; /* Space between the content */
+    align-items: flex-start; /* Align items at the top */
+    margin: 30px auto;
+    width: 80%;
+}
+
+.certificate_info {
+    width: 40%; /* Adjust the width as needed */
+    font-size: 1.2em;
+    padding-right: 20px;
+}
+
+.certificate_info h2 {
+    margin-bottom: 20px; /* Add space between info paragraphs */
+    font-size: 1.2em;
+    font-weight: bold;
+    color: brown;
+}
+
+.certificate_info p {
+    margin-bottom: 20px; /* Add space between info paragraphs */
+}
+
+.certificate_info p1 {
+    font-size: 17px;
+}
+
+.python_certificate {
+    width: 50%; /* Adjust the width as needed */
+}
+
+.python_certificate embed {
+    width: 90%; /* Adjust the width to fit the container */
+    height: auto; /* Ensure the image scales proportionally */
+}
+
+/* General icon styles */
+.header .fas {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 101; /* Ensure it's above other content */
+}
+
+/* Specific adjustments for the 'close' icon */
+.header .fa-times {
+    display: none; /* Initially hidden */
+}
+
+/* Reset menu for desktop view */
+@media (min-width: 769px) {
+    .navbar {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        background: none;
+        height: auto;
+        width: auto;
+        padding-top: 0;
+        right: 0;
+        transition: none;
+    }
+
+    header .fas {
+        display: none;
+    }
+
+    .overlay h1 {
+        font-size: 200%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .python_certificate {
+        width: 50%; /* Adjust the width as needed */
+    }
+
+    .python_certificate embed {
+        width: 90%; /* Adjust the width to fit the container */
+        height: auto; /* Ensure the image scales proportionally */
+    }
+}
+
+@media (max-width: 768px) {
+    .services-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-col-1 {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-col-2 {
+        text-align: center;
+    }
+
+    .overlay h1 {
+        font-size: 200%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .python_certificate_container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .certificate_info,
+    .python_certificate {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .python_certificate embed {
+        width: 100%;
+        height: auto;
+    }
+
+    .certificate_info p1 {
+        font-size: 14px; /* Adjusted font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 25px 29%;
+        color: #666;
+        flex-direction: column;
+        align-items: flex-start;  /* Align items to the left */
+        display: flex;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -200px;  /* Correct initial position */
+        width: 200px;
+        height: 100vh;
+        background: #ff004f;
+        padding-top: 50px;
+        transition: right 0.3s ease;
+    }
+
+    .overlay h1 {
+        font-size: 200%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    header .fas {
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        cursor: pointer
+    }
+
+    .fa-bars {
+        display: block;
+        font-size: 25px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .about-col-1 {
+        margin-bottom: 20px;
+    }
+
+    .about-col-2 {
+        text-align: center
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* Responsive styles for project section */
+    .work-list {
+        gap: 10px;
+    }
+
+    .work {
+        margin-bottom: 10px;
+    }
+
+    .layer h2 {
+        font-size: 18px;
+    }
+
+    .layer p {
+        font-size: 14px;
+    }
+
+    .layer a i {
+        font-size: 16px;
+    }
+
+    .python_certificate_container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .certificate_info,
+    .python_certificate {
+        width: 100%;
+        padding: 0 10px
+    }
+
+    .python_certificate embed {
+        width: 100%;
+        height: auto
+    }
+
+    .certificate_info p1 {
+        font-size: 12px; /* Adjusted font size for smaller screens */
+    }
+
+}

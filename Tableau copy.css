@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 12%;
+    background: black;
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    color: white;
+    text-shadow: 0 0 10px white;
+    transform: scale(1.1);
+}
+
+.navbar a {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid gray;
+}
+
+.fas {
+    display: none;
+}
+
+#main-content {
+    margin-top: 80px;
+    width: 100%;
+    height: 40vh;
+    background-image: url('images_certification.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-top: 110px;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 4em;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.overlay p {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: white;
+    margin-top: 0;
+}
+
+.overlay:hover {
+    text-shadow: 0 0 25px rgb(239, 233, 233);
+    color: white;
+}
+
+.down-arrow {
+    position: relative;
+    bottom: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.down-arrow a {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 12%;
+    background: black;
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    color: white;
+    text-shadow: 0 0 10px white;
+    transform: scale(1.1);
+}
+
+.navbar a {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid gray;
+}
+
+.fas {
+    display: none;
+}
+
+#main-content {
+    margin-top: 80px;
+    width: 100%;
+    height: 40vh;
+    background-image: url('images_certification.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-top: 110px;
+}
+
+#main-content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* White overlay with 50% opacity */
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 4em;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.overlay p {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: white;
+    margin-top: 0;
+}
+
+.overlay:hover {
+    text-shadow: 0 0 25px rgb(239, 233, 233);
+    color: white;
+}
+
+.down-arrow {
+    position: relative;
+    bottom: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.down-arrow a {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+    align-items: center;
+}
+
+.python_certificate_container {
+    display: flex;
+    justify-content: space-between; /* Space between the content */
+    align-items: flex-start; /* Align items at the top */
+    margin: 30px auto;
+    width: 80%;
+}
+
+.certificate_info {
+    width: 40%; /* Adjust the width as needed */
+    font-size: 1.2em;
+    padding-right: 20px;
+}
+
+.certificate_info h2 {
+    margin-bottom: 20px; /* Add space between info paragraphs */
+    font-size: 1.2em;
+    font-weight: bold;
+    color:brown;
+}
+
+
+.certificate_info p {
+    margin-bottom: 20px; /* Add space between info paragraphs */
+}
+
+.python_certificate {
+    width: 50%; /* Adjust the width as needed */
+}
+
+.python_certificate embed {
+    width: 90%; /* Adjust the width to fit the container */
+    height: auto; /* Ensure the image scales proportionally */
+}

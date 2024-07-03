@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Portfolio</title>
+    <link rel="stylesheet" href="Parking_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Venkat Reddy Mankala</span></a>
+        <nav class="navbar" id="sidemenu">
+            <a href="/index.html">Home</a>
+            <a href="#about" id="aboutLink">About</a>
+            <a href="#skills" id="skillsLink">Skills</a>
+            <a href="#portfolio" id="projectLink">Projects</a>
+            <a href="#certifications" id="certificationsLink">Certifications</a>
+            <a href="Resume.html">Resume</a>
+            <i class="fas fa-times" style="color: white;" onclick="closemenu()"></i>
+        </nav>
+        <i class="fas fa-bars" style="color: white;" onclick="openmenu()"></i>
+    </header>
+  
+    <div id="main-content">
+        <div class="overlay">
+            <h1>Parkinson's Diseases Prediction</h1>
+            <div class="down-arrow">
+                <a href="#about"><i class="fa-solid fa-chevron-down"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <section id="about">
+        <h2>Abstract</h2>
+        <p>Parkinson’s Disease (PD) is a progressive neurodegenerative disorder affecting motor functions. Traditional diagnostic methods rely on subjective assessments, which may miss early symptoms. This project explores the use of machine learning, specifically XGBoost, to detect PD through voice biomarkers. Utilizing a dataset of voice recordings from individuals with and without PD, the model achieved a peak accuracy of 92.31% and a Root Mean Square Error (RMSE) of 0.277350. This suggests that machine learning can provide a non-invasive, accurate, and cost-effective diagnostic tool for early PD detection.</p>
+        
+        <h2>Introduction</h2>
+        <h3>Background</h3>
+        <p>Parkinson's Disease (PD) is a debilitating neurological disorder affecting millions worldwide. It leads to progressive degeneration of motor functions and mental faculties. Common symptoms include tremors, voice impairments, and poor balance. Early detection is crucial for improving patients' quality of life and facilitating participation in clinical trials for potential treatments.</p>
+        
+        <h3>Purpose of the Project</h3>
+        <p>The goal is to develop a machine learning model capable of accurately detecting PD using voice data. This approach leverages non-invasive voice measurements, which can reflect the motor impairments characteristic of PD.</p>
+        
+        <h3>Problem Statement</h3>
+        <p>The project aims to build a model that predicts the presence of PD with high accuracy using voice recordings.</p>
+        
+        <h3>Objective</h3>
+        <p>To develop an XGBoost classifier that utilizes voice data to distinguish between healthy individuals and those with PD. The model will be evaluated based on accuracy and RMSE, with k-fold cross-validation to ensure robustness.</p>
+    </section>
+
+    <section id="overview">
+        <h2>Overview</h2>
+        <p>The project involves the following steps:</p>
+        <p>1. Acquiring and understanding the dataset.</p>
+        <p>2. Preprocessing the data to remove anomalies and prepare it for modeling.</p>
+        <p>3. Building the machine learning model using XGBoost.</p>
+        <p>4. Evaluating the model's performance.</p>
+        <p>5. Visualizing feature importance to understand which voice characteristics are most indicative of PD.</p>
+    </section>
+
+    <section id="impact">
+        <h2>Impact</h2>
+        <p>The project demonstrates that machine learning can be an effective tool for diagnosing PD, potentially offering more reliable and objective diagnoses compared to traditional methods. This could lead to earlier intervention and better management of the disease.</p>
+    </section>
+
+    <section id="findings">
+        <h2>Findings</h2>
+        <ul>
+            <li>The XGBoost model achieved an accuracy of 92.31% with an RMSE of 0.277350.</li>
+            <li>K-fold cross-validation confirmed the model’s robustness with an average test RMSE of 0.281145.</li>
+            <li>The feature MDVP.Fo(Hz), representing the average vocal fundamental frequency, was identified as the most important variable for detecting PD.</li>
+        </ul>
+    </section>
+
+    <section id="key-learnings">
+        <h2>Key Learnings</h2>
+        <ul>
+            <li>Machine learning models, especially XGBoost, can effectively analyze complex datasets to detect medical conditions like PD.</li>
+            <li>Voice biomarkers are a promising non-invasive diagnostic tool for neurological disorders.</li>
+            <li>Robust model validation techniques, such as k-fold cross-validation, are essential for ensuring the reliability of predictive models.</li>
+        </ul>
+    </section>
+
+    <section id="future-implications">
+        <h2>Future Implications</h2>
+        <ul>
+            <li>Enhancing the dataset with more samples can further improve model accuracy and generalizability.</li>
+            <li>Exploring deep learning methods and autoencoders could potentially yield even better performance.</li>
+            <li>Future research should focus on more complex datasets to validate the findings and explore the utility of voice biomarkers in other neurological disorders.</li>
+        </ul>
+    </section>
+
+    <section id="images">
+        <h2>Images</h2>
+        <h3>1. Workflow Diagram</h3>
+        <img src="Parking_diseases_img1.jpg" alt="Workflow Diagram">
+        <p>This image illustrates the methodology for building a model to detect Parkinson’s disease at its early stage using machine learning algorithms.</p>
+        
+        <h3>2. Feature Importance Visualization Using XGBoost</h3>
+        <img src="Parking_img2.jpg" alt="Feature Importance">
+        <p>This image shows the importance of each feature in the original dataset within the model, visualized as a bar graph.</p>
+        
+        <h3>3. Result Analysis Graph</h3>
+        <img src="Parking_img_3.png" alt="Result Analysis">
+        <p>This image depicts the accuracy of the machine learning model and the k-fold cross-validation results.</p>
+    </section>
+
+
+
+
+
+    <footer>
+        <div class="footer-content">
+            <p>"Did I spark your curiosity?"<br>"Give me a shout :)"</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/venkat-reddy-mankala-79035a221"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:2000venkatreddy@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 by Venkat</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+    
+    
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        var openMenuIcon = document.querySelector(".fa-bars");
+        var closeMenuIcon = document.querySelector(".fa-times");
+
+        function openmenu() {
+            sidemenu.style.left = "0";
+            openMenuIcon.style.display = "none";
+            closeMenuIcon.style.display = "block";
+        }
+
+        function closemenu() {
+            sidemenu.style.left = "-200px";
+            openMenuIcon.style.display = "block";
+            closeMenuIcon.style.display = "none";
+        }
+
+        openMenuIcon.addEventListener("click", openmenu);
+        closeMenuIcon.addEventListener("click", closemenu);
+    </script>
+    
+    <script>
+        function toggleChevron(icon) {
+            // Toggle the rotation of the clicked icon
+            icon.classList.toggle('rotated');
+        
+            // Check if the Python certification was clicked
+            if (icon.parentElement.textContent.includes('Python')) {
+                // Get the hidden link element
+                var pythonLink = document.getElementById('python-link');
+                // Toggle the display of the link
+                pythonLink.style.display = pythonLink.style.display === 'none' ? 'block' : 'none';
+            }
+        
+            // Check if the Tableau certification was clicked
+            if (icon.parentElement.textContent.includes('Tableau')) {
+                // Get the hidden link element
+                var TableauLink = document.getElementById('Tableau-link');
+                // Toggle the display of the link
+                TableauLink.style.display = TableauLink.style.display === 'none' ? 'block' : 'none';
+            }
+        
+            // Check if the SQL certification was clicked
+            if (icon.parentElement.textContent.includes('SQL')) {
+                // Get the hidden link element
+                var SQLLink = document.getElementById('SQL-link');
+                // Toggle the display of the link
+                SQLLink.style.display = SQLLink.style.display === 'none' ? 'block' : 'none';
+            }
+        }
+        </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

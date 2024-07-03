@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 12%;
+    background: black;
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    color: rgb(19, 10, 10);
+    text-shadow: 0 0 10px white;
+    transform: scale(1.1);
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid white;
+}
+
+.fas {
+    display: none;
+}
+
+.resume {
+    padding: 100px 12%;
+    background: rgb(245, 242, 242);
+    color: black;
+    text-align: center; /* Center the content */
+}
+
+.resume h1 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+}
+
+.resume h2, .resume h3 {
+    text-align: left; /* Align the headers to the left */
+}
+
+.resume h2 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+    border-bottom: 1px solid black;
+    margin-bottom: 10px; /* Add space between list items */
+    padding-bottom: 5px;
+}
+
+.resume h3 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+    margin-bottom: 9px; /* Add space between list items */
+}
+
+
+.resume p, .a{
+    text-align: center; /* Align paragraphs and lists to the left */
+
+}
+
+.resume p, .resume ul {
+    font-size: 16px;
+    text-align: left; /* Align paragraphs and lists to the left */
+    font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+.bullet-points {
+    margin-left: 20px;
+    list-style: none; /* Remove default bullets */
+    padding-left: 0;
+}
+
+.bullet-points li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px; /* Add space between list items */
+    font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+}
+
+.bullet-points li:before {
+    content: '\25CF'; /* Unicode for the bullet point */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    line-height: 1;
+    color: black;
+}
+
+.resume a {
+    color: black;
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px;
+    }
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -200px;
+        height: 100%;
+        width: 200px;
+        background: black;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.3s;
+    }
+    .navbar a {
+        margin: 20px 0;
+    }
+    .fas {
+        display: block;
+    }
+}

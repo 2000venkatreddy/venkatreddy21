@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+    text-decoration: none;
+    list-style: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 12%;
+    background: black;
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    color: white;
+    text-shadow: 0 0 10px white;
+    transform: scale(1.1);
+}
+
+.navbar a {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid gray;
+}
+
+#main-content {
+    margin-top: 80px; /* Add margin to prevent content from being hidden behind the fixed header */
+    width: 100%;
+    height: 40vh; /* Keep the height of image1 section */
+    background-image: url('projectimg4.jpg'); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Relative positioning for overlay */
+    padding-top: 110px; /* Adjust padding to avoid content being hidden by fixed header */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: blueviolet; /* White text color */
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 4em; /* Adjust size as needed */
+    font-weight: bold; /* Bold text */
+    font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+    font-style: italic;
+}
+
+.overlay p {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: blue; /* White color for the p */
+    margin-top: 0;
+}
+
+.overlay:hover {
+    text-shadow: 0 0 25px rgb(239, 233, 233);
+    color: white;
+}
+
+.portfolio-container {
+    padding: 20px;
+}
+
+.project-details {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.project-details h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color:blue;
+    margin-bottom: 5px;
+    margin-top: 25px;
+}
+
+.project-details p {
+    font-size: 1.3em;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.content-with-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project-image {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+footer {
+    background-color: darkgray; /* Adjust this as needed */
+    padding: 40px 0;
+    text-align: center;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-content p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    text-align: center; /* Center align the text */
+    padding-left: 20px; /* Add padding on the left to move text towards right */
+    padding-right: 20px; /* Add padding on the right to balance the spacing */
+}
+
+.social-icons {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center icons vertically */
+    justify-content: center; /* Center icons horizontally */
+    margin-top: -20px; /* Adjust if needed */
+}
+
+.social-icons a {
+    color: #333;
+    margin: 0 10px;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #666; /* Adjust hover color as needed */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 1em;
+    color: #666;
+    text-align: center; /* Center align text */
+    margin-bottom: 40px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header {
+        padding: 25px 29%;
+        color: #666;
+        flex-direction: column;
+        align-items: flex-start;  /* Align items to the left */
+        display: flex;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -200px;  /* Correct initial position */
+        width: 200px;
+        height: 100vh;
+        background: #ff004f;
+        padding-top: 50px;
+        transition: right 0.3s ease;
+    }
+
+    header .fa-bars {
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 20px; /* Positioned on the left */
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    header .fa-times {
+        display: none; /* Initially hidden */
+        position: absolute;
+        top: 15px;
+        left: 20px; /* Positioned on the left */
+        font-size: 25px;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        background: none;
+        height: auto;
+        width: auto;
+        padding-top: 0;
+        right: 0;
+        transition: none;
+    }
+
+    header .fas {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-col-1 {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .about-col-2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .row1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-1 {
+        margin-bottom: 20px;
+    }
+    .skill-2 {
+        text-align: center;
+    }
+    .tab-titles {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tab-links {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .row1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-1 {
+        margin-bottom: 20px;
+    }
+    .skill-2 {
+        text-align: center;
+    }
+    .tab-titles {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tab-links {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    .tab-contents {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        gap: 30px;
+    }
+    .work {
+        width: 100%;
+        position: relative; /* Ensure the overlay is positioned correctly */
+    }
+    .work img {
+        width: 100%;
+        height: auto;
+        display: block; /* Ensure the image is displayed as a block element */
+    }
+}
+
+@media (max-width: 480px) {
+    .work-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Switch to single column */
+    }
+    .work {
+        width: 100%;
+        position: relative; /* Ensure the overlay is positioned correctly */
+        margin-bottom: 10px;
+    }
+    .work img {
+        width: 100%;
+        height: auto;
+        display: block; /* Ensure the image is displayed as a block element */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 25px 29%;
+        color: #666;
+        flex-direction: column;
+        align-items: flex-start;  /* Align items to the left */
+        display: flex;
+    }
+
+    #main-content {
+        margin-top: 80px; /* Add margin to prevent content from being hidden behind the fixed header */
+        width: 100%;
+        height: 125vh; /* Keep the height of image1 section */
+        background-image: url('projectimg4.jpg'); /* Ensure the path is correct */
+        background-size: cover;
+        background-position: center;
+        position: relative; /* Relative positioning for overlay */
+        padding-top: 110px; /* Adjust padding to avoid content being hidden by fixed header */
+    }
+
+    .logo {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -200px;  /* Correct initial position */
+        width: 200px;
+        height: 100vh;
+        background: #ff004f;
+        padding-top: 50px;
+        transition: right 0.3s ease;
+    }
+
+    .overlay h1 {
+        font-size: 200%;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    header .fas {
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        cursor: pointer;
+    }
+
+    .fa-bars {
+        display: block;
+        font-size: 25px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .about-col-1 {
+        margin-bottom: 20px;
+    }
+
+    .about-col-2 {
+        text-align: center;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .work-list {
+        gap: 10px;
+    }
+    .work {
+        margin-bottom: 10px;
+    }
+    .layer h2 {
+        font-size: 18px;
+    }
+    .layer p {
+        font-size: 14px;
+    }
+    .layer a i {
+        font-size: 16px;
+    }
+
+    .social-icons {
+        justify-content: center; /* Ensure icons are centered */
+        margin: 0 auto; /* Center container */
+    }
+
+    .social-icons a {
+        margin: 0 8px; /* Adjust margin for smaller screens */
+        font-size: 24px; /* Adjust icon size for smaller screens */
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Portfolio</title>
+    <link rel="stylesheet" href="Tableau.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Venkat Reddy Mankala</span></a>
+        <nav class="navbar" id="sidemenu">
+            <a href="/index.html" class="active">Home</a>
+            <a href="#about" id="aboutLink">About</a>
+            <a href="#skills" id="skillsLink">Skills</a>
+            <a href="#projects" id="projectsLink">Projects</a>
+            <a href="#certifications" id="certificationsLink">Certifications</a>
+            <a href="/Resume.html">Resume</a>
+            <i class="fas fa-times" style="color: white;" onclick="closemenu()"></i>
+        </nav>
+        <i class="fas fa-bars" style="color: white;" onclick="openmenu()"></i>
+    </header>
+
+
+
+    <div id="main-content">
+        <div class="overlay">
+            <h1>Tableau_certification</h1>
+        </div>
+    </div>
+
+    <div class="python_certificate_container">
+        <div class="certificate_info">
+            <h2>Fundamentals of Visualization with Tableau</h2>
+            <p><strong>Issued by:</strong>University of California</p>
+            <p><strong>Issued on:</strong> Apr 4, 2024</p>
+            <p><strong>Credential ID:</strong> ZP5N3GMPQU5P</p>
+            <p1><strong>URL:</strong> <a href="https://www.coursera.org/account/accomplishments/certificate/ZP5N3GMPQU5P">https://www.coursera.org/account/accomplishments/certificate/ZP5N3GMPQU5P</a></p1>
+        </div>
+        <div class="python_certificate">
+            <embed src="Tableau.png" />
+        </div>
+    </div>
+
+
+    <script>
+        // Tab functionality
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        // Sidebar menu open/close functionality
+        var sidemenu = document.getElementById("sidemenu");
+        var openMenuIcon = document.querySelector(".fa-bars");
+        var closeMenuIcon = document.querySelector(".fa-times");
+
+        function openmenu() {
+            sidemenu.style.left = "0";
+            openMenuIcon.style.display = "none";
+            closeMenuIcon.style.display = "block";
+        }
+
+        function closemenu() {
+            sidemenu.style.left = "-200px";
+            openMenuIcon.style.display = "block";
+            closeMenuIcon.style.display = "none";
+        }
+
+        openMenuIcon.addEventListener("click", openmenu);
+        closeMenuIcon.addEventListener("click", closemenu);
+
+        // Reset menu and icon state on window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                sidemenu.style.left = "0";
+                openMenuIcon.style.display = "none";
+                closeMenuIcon.style.display = "none";
+            } else {
+                closemenu();
+            }
+        });
+    </script>
+
+
+
+
+    
+</body>
+</html>
+
+
+  
+ 

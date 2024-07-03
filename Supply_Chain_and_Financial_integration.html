@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio of Venkat Reddy Mankala</title>
+    <link rel="stylesheet" href="Supply_chain_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Venkat Reddy Mankala</span></a>
+        <i class="fas fa-bars" id="openMenuIcon"></i>
+        <nav class="navbar" id="sidemenu">
+            <a href="/index.html" class="active">Home</a>
+            <a href="#about" id="aboutLink">About</a>
+            <a href="#skills" id="skillsLink">Skills</a>
+            <a href="#projects" id="projectsLink">Projects</a>
+            <a href="#certifications" id="certificationsLink">Certifications</a>
+            <a href="#resume">Resume</a>
+        </nav>
+        <i class="fas fa-times" id="closeMenuIcon"></i>
+    </header>
+
+    <div id="main-content">
+        <div class="overlay">
+            <h1>Integrated Supply Chain and Financial Management System</h1>
+        </div>
+    </div>
+
+    <section id="projects">
+        <div class="container">
+            <div class="content">
+                <h3>Abstract</h3>
+                <p>In the rapidly evolving landscape of manufacturing and supply chain management, the need for an integrated system to streamline operations, manage resources efficiently, and ensure financial oversight has never been greater. To address these challenges, our project aims to develop a comprehensive ERP DB Schema for XYZ Steels Private Ltd. This database will provide a centralized repository for maintaining operations, optimizing material procurement, and ensuring seamless financial operations. This model will help the company run smoothly, organize its different parts, buy materials efficiently, and keep track of all financial invoices.</p>
+                
+                <h3>Problem Statement</h3>
+                <p>Our company often deals with complex operational processes, including employee management, product management, vendor invoices, and managing warehouses. The chances of facing inefficiencies in deliverables, time management, and financial discrepancies are immense. To address these issues, our module sets out to create a robust and efficient DB Schema which will:</p>
+                <ul>
+                    <li>Ensure employees are tagged to specific departments, warehouses, and production lines to maintain a seamless environment.</li>
+                    <li>Manage the entire product lifecycle from Design -> Plan -> Implementation -> Production.</li>
+                    <li>Efficiently manage the flow of raw materials, by keeping track of whether they originate from warehouses or are directly supplied by the vendors.</li>
+                    <li>Track and process vendor invoices with proper details to ensure seamless financial operations within the accounting department.</li>
+                </ul>
+                
+                <h3>Methodology</h3>
+                <p>As per the requirement being gathered, and as the tasks involve moderate complexity in Database design and data manipulation, we have chosen the Rapid Application Development (RAD) methodology for developing this Enterprise Resource Planning (ERP) Database Schema as it emphasizes iterative development, prototyping, and collaboration between stakeholders. RAD is particularly beneficial when the requirements are not fully understood at the beginning, as it allows for flexibility and frequent feedback. RAD allows for quick iterations and continuous feedback from stakeholders, ensuring that the repository is systematically organized and aligned with evolving project requirements and enables the gradual development of the Entity Relationship Diagram, allowing for continuous refinement based on stakeholder feedback.</p>
+
+                <h3>ER Diagram</h3>
+                <div class="norm_before">
+                    <img src="norm_before.png" alt="Normalization Before Image" class="centered-image">
+                </div>
+
+                <div class="content-with-image">
+                    <img src="Cluster-1.pdf" class="project-image" alt="Cluster 1 Image">
+                    <div class="text-content">
+                        <h4>Cluster 1</h4>
+                        <p>Cluster 1 includes the entities Product and Production Line. The Product entity contains attributes such as ProductNumber, ProductName, Price, Cost, Color, Weight, and Raw Material. The Production Line entity includes LineNumber, LineCapacity, PhoneNumber, and Address. The business rules specify that each product must be produced by one specific production line, and each production line can produce only one type of product. For repair purposes, production lines may produce no products. Referential constraints are defined for ProductNumber as the primary key in Product, LineNumber as the primary key in Production Line, and LineNumber as a foreign key in Product.</p>
+                    </div>
+                </div>
+
+                <div class="content-with-image">
+                    <img src="Cluster-2.pdf" class="project-image" alt="Cluster 2 Image">
+                    <div class="text-content">
+                        <h4>Cluster 2</h4>
+                        <p>Cluster 2 consists of the entities Vendor, Warehouse, Raw Material, and Supply Schedule. The Vendor entity includes VendorID, VendorName, Address, and PhoneNumber. The Warehouse entity comprises WarehouseNumber, Address, and PhoneNumber. The Raw Material entity includes RawMaterialName, ProductNumber, and LineNumber, while the Supply Schedule entity consists of SupplyCode, ProductNumber, RawMaterialName, WarehouseNumber, and VendorID. The business rules state that each vendor can supply many raw materials to any number of warehouses, and raw materials can be supplied by multiple warehouses and vendors. Warehouses must be supplied with at least one raw material. Referential constraints are defined for ProductNumber and RawMaterialName as primary keys and foreign keys in Raw Material, LineNumber as a foreign key in Raw Material, and VendorID as a foreign key in Supply Schedule.</p>
+                    </div>
+                </div>
+
+                <div class="content-with-image">
+                    <img src="Cluster-3.pdf" class="project-image" alt="Cluster 3 Image">
+                    <div class="text-content">
+                        <h4>Cluster 3</h4>
+                        <p>Cluster 3 includes the entities Employee, Warehouse, Department, and Product. The Employee entity contains attributes such as EmployeeID, FirstName, LastName, Position, Salary, WorkCategory, DepartmentID, WarehouseNumber, and LineNumber. The Warehouse entity includes WarehouseNumber, Address, and PhoneNumber. The Department entity comprises DepartmentID, DepartmentName, Location, NumberOfEmployees, and PhoneNumber. The Product entity includes ProductNumber, ProductName, DesignerID, Price, Cost, Color, and Weight. The business rules specify that employees work in one department, warehouse, or production line, and only design department employees design products. Each product has exactly one designer. Referential constraints are defined for DepartmentID, WarehouseNumber, and LineNumber as foreign keys in Employee, and DesignerID as a foreign key in Product.</p>
+                    </div>
+                </div>
+
+                <div class="content-with-image">
+                    <img src="cluster-4.png" class="project-image" alt="Cluster 4 Image">
+                    <div class="text-content">
+                        <h4>Cluster 4</h4>
+                        <p>Cluster 4 includes the entities Invoice and Department. The Invoice entity contains attributes such as InvoiceNumber, TotalAmount, VendorNumber, and VendorPaymentType. The Department entity includes DepartmentID, DepartmentName, Location, NumberOfEmployees, and PhoneNumber. The business rules state that vendors submit invoices when they supply raw materials, and these invoices are processed by the accounting department. Referential constraints are defined for VendorNumber as a foreign key in Invoice.</p>
+                    </div>
+                </div>
+                
+
+                <h3>Normalization</h3>
+                <ul>
+                    <li><strong>Product:</strong> The table is already in 1NF, 2NF, and 3NF, as all attributes are fully dependent on the primary key {ProductNumber}, with no partial or transitive dependencies.</li>
+                    <li><strong>Raw Material:</strong> Initially in 1NF, the table required splitting into two tables to eliminate partial dependencies, thus achieving 3NF. The new tables are <code>rawmaterial</code> and <code>Product</code>.</li>
+                    <li><strong>Production Line:</strong> This table meets the criteria for 1NF, 2NF, and 3NF, with no partial or transitive dependencies. All attributes are fully dependent on the primary key {LineNumber}.</li>
+                    <li><strong>Supply Schedule:</strong> The table is in 1NF, 2NF, and 3NF, as there are no partial dependencies, and each attribute depends on the primary key {SupplyCode} with no transitive dependencies.</li>
+                    <li><strong>Warehouse:</strong> Already in 1NF, 2NF, and 3NF, as all attributes depend entirely on the primary key {WarehouseNumber} with no partial or transitive dependencies.</li>
+                    <li><strong>Vendor:</strong> This table meets the criteria for 1NF, 2NF, and 3NF, with all attributes fully dependent on the primary key {VendorNumber}, and no transitive dependencies.</li>
+                    <li><strong>Department:</strong> The table is already normalized to 1NF, 2NF, and 3NF, with no partial or transitive dependencies, and all attributes fully dependent on the primary key {DepartmentID}.</li>
+                    <li><strong>Employee:</strong> Initially in 1NF and 2NF, the table was split into four tables (<code>Employee</code>, <code>Department_employee</code>, <code>Production_line_employee</code>, <code>Warehouse_employee</code>) to handle subtype-supertype relationships, achieving 3NF.</li>
+                    <li><strong>Invoice:</strong> The table is normalized to 3NF by splitting it into two tables (<code>Vendor</code> and <code>Invoice</code>) to remove transitive dependencies, with all attributes fully dependent on the primary key {InvoiceNumber}.</li>
+                </ul>
+                <p>This normalization process ensures the data integrity and efficiency of the database, optimizing operations and maintaining a seamless flow of information across different entities.</p>
+
+                <div class="norm_After">
+                    <img src="norm_after.png" alt="Normalization After Image" class="centered-image">
+                </div>
+
+                <section id="oracle-queries-analysis">
+                    <h3>Oracle Queries Analysis Summary</h3>
+                    <p>
+                        And also we implemented  Oracle queries in the project demonstrate the  SQL commands for creating, managing, and querying the database tables. These queries include the creation of tables with primary and foreign keys, insertion of data into these tables, and various select statements to retrieve and manipulate data. The queries ensure data integrity and enforce relationships between entities, supporting the normalization process and adhering to business rules and constraints. This systematic approach showcases the practical application of theoretical database principles to address the needs of XYZ Steels Private Ltd efficiently.
+                    </p>
+                </section>
+                
+                <h3>Conclusion</h3>
+                <p>As a culmination to the iterative approach and based on the identified problem areas such as, employee management, product lifecycle tracking, raw material monitoring, and vendor invoice processing, have been thoroughly considered and integrated into our schema. Our project timeline outlines the iterative development process, with specific tasks and milestones set for each iteration. We anticipate continuous feedback from stakeholders and aim to refine our schema progressively. Our team will maintain consistency and commitment to delivering a comprehensive ERP Database Schema that will optimize XYZ Steels Private Ltd to operate seamlessly, efficiently manage its resources, and maintain a transparent financial system. We look forward to the successful execution of this project and its positive impact on the company's operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>"Did I spark your curiosity?"<br>"Give me a shout :)"</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/venkat-reddy-mankala-79035a221"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:2000venkatreddy@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 by Venkat</p>
+        </div>
+    </footer>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        var openMenuIcon = document.getElementById("openMenuIcon");
+        var closeMenuIcon = document.getElementById("closeMenuIcon");
+
+        function openmenu() {
+            sidemenu.classList.add("opened");
+            openMenuIcon.style.display = "none";
+            closeMenuIcon.style.display = "block";
+        }
+
+        function closemenu() {
+            sidemenu.classList.remove("opened");
+            openMenuIcon.style.display = "block";
+            closeMenuIcon.style.display = "none";
+        }
+
+        openMenuIcon.addEventListener("click", openmenu);
+        closeMenuIcon.addEventListener("click", closemenu);
+    </script>
+</body>
+</html>

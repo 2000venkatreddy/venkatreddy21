@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+    text-decoration: none;
+    list-style: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 12%;
+    background: black;
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    color: white;
+    text-shadow: 0 0 10px white;
+    transform: scale(1.1);
+}
+
+.navbar a {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid gray;
+}
+
+.fas {
+    display: none;
+}
+
+
+#main-content {
+    margin-top: 80px; /* Add margin to prevent content from being hidden behind the fixed header */
+    width: 100%;
+    height: 40vh; /* Keep the height of image1 section */
+    background-image: url('images_certification.jpg'); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Relative positioning for overlay */
+    padding-top: 110px; /* Adjust padding to avoid content being hidden by fixed header */
+}
+
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* White text color */
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 3.2em; /* Adjust size as needed */
+    font-weight: bold; /* Bold text */
+    font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+    font-style: italic;
+}
+
+.overlay p {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: white; /* White color for the p */
+    margin-top: 0;
+}
+
+.overlay:hover{
+    text-shadow: 0 0 25px rgb(239, 233, 233);
+    color:white;
+}
+
+.down-arrow {
+    position: relative;
+    bottom:-55px; /* Position 20px from the bottom of the page */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
+}
+
+.down-arrow a {
+    color: white; /* Change to any color you need */
+    font-size: 2em; /* Font size for the icon */
+    text-decoration: none; /* Remove underline from the link */
+    align-items: center;
+    margin-bottom: auto;
+}
+
+header .fas{
+    display:none;
+}

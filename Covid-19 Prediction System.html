@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Portfolio</title>
+    <link rel="stylesheet" href="Covid_19_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Venkat Reddy Mankala</span></a>
+        <nav class="navbar" id="sidemenu">
+            <a href="/index.html" class="active">Home</a>
+            <a href="#about" id="aboutLink">About</a>
+            <a href="#about1" id="about1Link">Skills</a>
+            <a href="#portfolio" id="projectlink">Projects</a>
+            <a href="#certification-section" id="certificationslink">Certifications</a>
+            <a href="/Resume.html">Resume</a>
+            <i class="fas fa-times" style="color: white;" onclick="closemenu()"></i>
+        </nav>
+        <i class="fas fa-bars" style="color: white;" onclick="openmenu()"></i>
+    </header>
+
+    <div id="main-content">
+        <div class="overlay">
+            <h1>Project: Predicting COVID-19 Outbreak</h1>
+        </div>
+    </div>
+
+    <section id="portfolio">
+        <div class="portfolio-container">
+            <div class="project-details">
+                <h3>Abstract</h3>
+                <p>This project focuses on predicting the outbreak of the COVID-19 pandemic using machine learning techniques. By analyzing extensive datasets and employing predictive models, we aimed to forecast the spread of the virus and provide actionable insights to help mitigate its impact. The project highlights the significance of data-driven approaches in understanding and combating pandemics.</p>
+                
+                <h3>Introduction</h3>
+                <p>The outbreak of COVID-19, caused by a novel coronavirus, emerged in Wuhan, China, in December 2019 and rapidly became a global pandemic. This project leverages machine learning to predict the virus's spread, enabling better preparedness and response strategies. Our analysis encompasses data from various regions, comparing trends and forecasting future cases.</p>
+                
+                <h3>Overview</h3>
+                <p>This project involved a comprehensive analysis of COVID-19 data, utilizing machine learning models to predict the pandemic's progression. By examining case data from multiple countries, we identified trends and correlations, developing a robust predictive model to forecast the virus's spread. The project underscores the power of machine learning in public health.</p>
+
+                <h3>Impact</h3>
+                <p>The project provided critical insights into the spread of COVID-19, informing public health strategies and interventions. Our predictive model enabled authorities to anticipate case surges, optimize resource allocation, and implement timely preventive measures. The analysis significantly contributed to understanding the pandemic's dynamics, aiding in more effective response planning.</p>
+
+                <div class="content-with-image">
+                    <img src="Covid-1.jpg" alt="Data Analysis" class="project-image">
+                </div>
+
+                <h3>Findings</h3>
+                <p>The analysis revealed critical insights into the exponential growth of COVID-19 cases, emphasizing the importance of early interventions. The predictive model accurately forecasted case numbers, demonstrating the efficacy of machine learning in pandemic prediction.</p>
+
+                <h3>Key Learnings</h3>
+                <p>The project highlighted the significance of data-driven decision-making in public health. It showcased the utility of machine learning in forecasting disease outbreaks and the importance of timely data collection and analysis for effective response strategies.</p>
+
+                <h3>Future Implications</h3>
+                <p>Future work can expand the model to include additional factors such as vaccination rates and mobility data. Longitudinal analysis and integration of real-time data can enhance the model's accuracy and applicability, further supporting pandemic preparedness and response efforts.</p>
+
+                <h3>Portfolio Inclusion</h3>
+                <p>This project exemplifies my expertise in applying machine learning to real-world problems, particularly in public health. My role in developing and evaluating a predictive model for COVID-19 showcases my ability to leverage data science for impactful insights, making it a valuable addition to my portfolio.</p>
+                
+                <div class="content-with-image">
+                    <img src="covid.jpg" alt="Data Analysis" class="project-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <p>"Did I spark your curiosity?"<br>"Give me a shout :)"</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/venkat-reddy-mankala-79035a221"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:2000venkatreddy@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 by Venkat</p>
+        </div>
+    </footer>
+
+    
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        var openMenuIcon = document.querySelector(".fa-bars");
+        var closeMenuIcon = document.querySelector(".fa-times");
+
+        function openmenu() {
+            sidemenu.style.left = "0";
+            openMenuIcon.style.display = "none";
+            closeMenuIcon.style.display = "block";
+        }
+
+        function closemenu() {
+            sidemenu.style.left = "-200px";
+            openMenuIcon.style.display = "block";
+            closeMenuIcon.style.display = "none";
+        }
+
+        openMenuIcon.addEventListener("click", openmenu);
+        closeMenuIcon.addEventListener("click", closemenu);
+    </script>
+</body>
+</html>
