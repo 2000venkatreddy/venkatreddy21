@@ -965,6 +965,10 @@ footer {
         cursor: pointer;
     }
 
+    header.open .fas {
+        right: auto; /* Remove right positioning */
+        left: 20px; /* Position from the left */
+    }
     .fa-bars {
         display: block;
         font-size: 25px;
@@ -1016,4 +1020,3 @@ footer {
 }
 
 }
-
