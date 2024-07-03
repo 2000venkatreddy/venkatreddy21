@@ -16,9 +16,8 @@
             <a href="#about" id="aboutLink">About</a>
             <a href="#about1" id="about1Link">Skills</a>
             <a href="#portfolio" id="projectlink">Projects</a>
-            <a href="#certification-section" id="certificationslink">Certifications</a>
-            <a href="/Resume.html" id="resumelink">Resume</a>
-
+            <a href="#certifications-section" id="certificationslink" >Certifications</a>
+            <a href="Resume.html" id="resumelink">Resume</a>
             <i class="fas fa-times" style="color: white;" onclick="closemenu()"></i>
         </nav>
         <i class="fas fa-bars" style="color: white;" onclick="openmenu()"></i>
@@ -129,7 +128,7 @@
                     <div class="layer">
                         <h2>Parkinson's_Disease_Prediction</h2>
                         <p>Created an app for detecting and analyzing crime patterns in urban areas.</p>
-                        <a href="/Parkinson's_Disease_Prediction.html"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="Parkinson's_Disease_Prediction.html"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
     
@@ -138,7 +137,7 @@
                     <div class="layer">
                         <h2>Secure File Transfer and Processing System</h2>
                         <p>Developed a secure file transfer system, improving data security and efficiency.</p>
-                        <a href="/Secure_File_Transfer_and_Processing_System.html"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="Secure_File_Transfer_and_Processing_System.html"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
     
@@ -147,7 +146,7 @@
                     <div class="layer">
                         <h2>Supply Chain and Financial Integration Systems</h2>
                         <p>Implemented integration systems for better supply chain and financial management.</p>
-                        <a href="/Supply_Chain_and_Financial_integration.html"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="Supply_Chain_and_Financial_integration.html"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
     
@@ -156,7 +155,7 @@
                     <div class="layer">
                         <h2>Covid-19 Prediction System</h2>
                         <p>Developed a prediction system for Covid-19 cases, aiding in healthcare management.</p>
-                        <a href="/Covid-19%20Prediction%20System.html"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="Covid-19%20Prediction%20System.html"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
     
@@ -165,7 +164,7 @@
                     <div class="layer">
                         <h2>Sales Superstore Dashboard Implementation </h2>
                         <p>Engineered data cleaning workflows and deployed Tableau dashboards, boosting data accuracy by 50% and improving decision-making by 40%.</p>
-                        <a href="/Sales_Superstore%20_Dashboard%20_Implementation%20.html"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="Sales_Superstore%20_Dashboard%20_Implementation%20.html"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
@@ -173,28 +172,28 @@
     </div>
 
      <!--------------------------------------------------- certification -------------------------------------------------------------->
-     <div id="certification-section">
+    <div id="certification-section">
         <div class="certification-container">
             <h1 class="certification-title">Certifications</h1>
             <div class="certification-list">
                 <div class="certification-item">
                     <h2>Python <i class="fa-solid fa-chevron-down" onclick="toggleChevron(this)"></i></h2>
-                    <a id="python-link" href="/Python.html" style="display: none;">Foundations of Data Science: K-Means Clustering in Python <i class="fas fa-external-link-alt"></i></a>
+                    <a id="python-link" href="Python.html" style="display: none;">Foundations of Data Science: K-Means Clustering in Python <i class="fas fa-external-link-alt"></i></a>
                 </div>
                 <div class="certification-item">
                     <h2>Tableau <i class="fa-solid fa-chevron-down" onclick="toggleChevron(this)"></i></h2>
-                    <a id="Tableau-link" href="/Tableau.html" style="display: none;">Fundamentals of Visualization with Tableau <i class="fas fa-external-link-alt"></i></a>
+                    <a id="Tableau-link" href="Tableau.html" style="display: none;">Fundamentals of Visualization with Tableau <i class="fas fa-external-link-alt"></i></a>
                 </div>
                 <div class="certification-item">
                     <h2>SQL and Database Management <i class="fa-solid fa-chevron-down" onclick="toggleChevron(this)"></i></h2>
-                    <a id="SQL-link" href="/SQL.html" style="display: none;">PL/SQL<i class="fas fa-external-link-alt"></i></a>
+                    <a id="SQL-link" href="SQL.html" style="display: none;">PL/SQL<i class="fas fa-external-link-alt"></i></a>
                 </div>
-               <!--<div class="certification-item">
+                <div class="certification-item">
                     <h2>Microsoft Excel <i class="fa-solid fa-chevron-down" onclick="toggleChevron(this)"></i></h2>
                 </div>
                 <div class="certification-item">
                     <h2>Power BI <i class="fa-solid fa-chevron-down" onclick="toggleChevron(this)"></i></h2>
-                </div>--->
+                </div>
             </div>
         </div>
     </div>
@@ -220,23 +219,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
@@ -255,39 +237,15 @@
 
     <script>
         var sidemenu = document.getElementById("sidemenu");
-        var openMenuIcon = document.querySelector(".fa-bars");
-        var closeMenuIcon = document.querySelector(".fa-times");
 
         function openmenu() {
-            sidemenu.style.left = "0";
-            openMenuIcon.style.display = "none";
-            closeMenuIcon.style.display = "block";
+            sidemenu.style.right = "0";
         }
-
         function closemenu() {
-            sidemenu.style.left = "-200px";
-            openMenuIcon.style.display = "block";
-            closeMenuIcon.style.display = "none";
+            sidemenu.style.right = "-200px";
         }
-
-        openMenuIcon.addEventListener("click", openmenu);
-        closeMenuIcon.addEventListener("click", closemenu);
-
-            // Add an event listener for window resize
-    window.addEventListener('resize', function() {
-        // Check if the window width is more than 768 pixels
-        if(window.innerWidth > 768) {
-            // Reset the menu and icon state appropriate for a larger screen
-            sidemenu.style.left = "0";
-            openMenuIcon.style.display = "none";
-            closeMenuIcon.style.display = "none";
-        } else {
-            // Ensure the menu is closed and the menu icon is visible on smaller screens
-            closemenu();
-        }
-    });
     </script>
-    
+
     <script>
         function toggleChevron(icon) {
             // Toggle the rotation of the clicked icon
